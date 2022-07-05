@@ -32,7 +32,6 @@ section.alternate-background {
 
 main img {
   width: 100%;
-  padding: 10px 0;
 }
 
 /* ---  Groups & Items --- */
@@ -45,7 +44,6 @@ main img {
 .item {
   flex: 1;
   margin: 10px;
-  align-content: center;
 }
 
 .item-double {
@@ -71,10 +69,9 @@ header nav {
   justify-content: center;
 }
 
+
 header nav ul {
   display: flex;
-  padding-left: 0;
-  list-style: none;
 }
 
 header nav ul li {
@@ -98,11 +95,6 @@ form {
   padding: 10px;
 }
 
-form div {
-  display: flex;
-  justify-content: space-between;
-}
-
 form label {
   font-weight: bold;
 }
@@ -118,7 +110,13 @@ form button {
   border: none;
   color: #fff;
   font-size: 24px;
+  padding: 15px;
   width: 100%;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* -------  Footer ------- */
@@ -136,27 +134,48 @@ footer p {
 /* -------  Media Query ------- */
 
 @media all and (min-width: 480px) {
+
+  /* ------ General ------ */
+
+  p {
+    padding: 10px;
+  }
+
+  .group-lg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  
+  /* ------ Navigation ------ */
+
   header {
     display: flex;
     justify-content: space-between;
   }
 
-  header nav {
+  header div {
     display: flex;
-    justify-content: space-between;
-  }
-
-  .group {
-    flex-direction: row;
-  }
-
-  .poptart {
     align-items: center;
   }
 
-  .strudel {
-    flex-direction: column;
-    
+  /* ------ Form -----*/
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
+  form div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  form button {
+    margin: 10px;
+    width: 100%;
+  }
 }
